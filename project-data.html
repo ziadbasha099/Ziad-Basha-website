@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بيانات المشروع — Ziad Basha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="glow"></div>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="logo"><span class="dot"></span>Ziad Basha</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about" data-i18n="nav_about">نبذة</a></li>
+        <li><a href="index.html#skills" data-i18n="nav_skills">المهارات</a></li>
+        <li><a href="index.html#process" data-i18n="nav_process">أسلوب العمل</a></li>
+        <li><a href="index.html#work" data-i18n="nav_work">الأعمال</a></li>
+        <li><a href="index.html" data-i18n="pd_back">الرئيسية</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="icon-btn mono" id="langToggle" title="Language">EN</button>
+        <button class="icon-btn" id="themeToggle" title="Theme">
+          <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero hero-form" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="eyebrow"><span class="blink"></span><span data-i18n="pd_eyebrow">نموذج بدء المشروع</span></div>
+    <h1 class="pd-h1" data-i18n="pd_page_title">بيانات المشروع</h1>
+    <p class="pd-sub" data-i18n="pd_sub">املأ البيانات دي وابعتها، وهبدأ أراجعها وأتواصل معك في أقرب وقت.</p>
+  </div>
+</section>
+
+<main>
+  <section id="project-data">
+    <div class="wrap">
+      <form class="pd-card glass pd-form" action="https://formsubmit.co/ziadbasha.work@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="بيانات مشروع جديد من الموقع">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="pd-section">
+          <div class="section-tag" data-i18n="pd_user_tag">بياناتك</div>
+          <h2 class="section-title" data-i18n="pd_user_title">معلومات التواصل</h2>
+
+          <div class="field">
+            <label for="ownerName" data-i18n="pd_name_label">اسم صاحب المشروع</label>
+            <input type="text" id="ownerName" name="اسم صاحب المشروع" required data-i18n-placeholder="pd_name_ph" placeholder="مثال: زياد باشا">
+          </div>
+          <div class="field">
+            <label for="ownerEmail" data-i18n="pd_email_label">البريد الإلكتروني</label>
+            <input type="email" id="ownerEmail" name="البريد الإلكتروني" required placeholder="example@email.com">
+          </div>
+          <div class="field">
+            <label for="ownerPhone" data-i18n="pd_phone_label">رقم الهاتف (اختياري)</label>
+            <input type="tel" id="ownerPhone" name="رقم الهاتف" placeholder="+20 1xxxxxxxxx">
+          </div>
+        </div>
+
+        <div class="pd-section">
+          <div class="section-tag" data-i18n="pd_project_tag">مشروعك</div>
+          <h2 class="section-title" data-i18n="pd_project_title">تفاصيل المشروع</h2>
+
+          <div class="field">
+            <label for="projectName" data-i18n="pd_pname_label">اسم المشروع</label>
+            <input type="text" id="projectName" name="اسم المشروع" required data-i18n-placeholder="pd_pname_ph" placeholder="اكتب اسم المشروع">
+          </div>
+
+          <div class="field">
+            <label data-i18n="pd_logo_label">شعار المشروع</label>
+            <div class="upload-row">
+              <label class="upload-btn btn btn-ghost btn-sm" for="logoFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
+              <input type="file" id="logoFile" name="شعار المشروع" accept="image/*,.pdf" class="visually-hidden">
+              <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
+              <label class="none-check">
+                <input type="checkbox" class="none-toggle" data-target="logoFile" name="شعار المشروع - ملاحظة" value="لا يوجد">
+                <span data-i18n="pd_none">لا يوجد</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label data-i18n="pd_colors_label">الألوان والخطوط</label>
+            <div class="upload-row">
+              <label class="upload-btn btn btn-ghost btn-sm" for="colorsFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
+              <input type="file" id="colorsFile" name="الألوان والخطوط" class="visually-hidden">
+              <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
+              <label class="none-check">
+                <input type="checkbox" class="none-toggle" data-target="colorsFile" name="الألوان والخطوط - ملاحظة" value="لا يوجد">
+                <span data-i18n="pd_none">لا يوجد</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label data-i18n="pd_type_label">نوع الموقع</label>
+            <div class="custom-select" id="typeSelect">
+              <button type="button" class="cs-trigger">
+                <span class="cs-value" data-i18n="pd_type_placeholder">اختر نوع الموقع</span>
+                <svg class="cs-chevron" width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l5 5 5-5"/></svg>
+              </button>
+              <ul class="cs-list" role="listbox">
+                <li class="cs-option" role="option" data-value="تعليمي" data-i18n="pd_type_edu">تعليمي</li>
+                <li class="cs-option" role="option" data-value="متجر إلكتروني" data-i18n="pd_type_store">متجر إلكتروني</li>
+                <li class="cs-option" role="option" data-value="موقع شخصي" data-i18n="pd_type_personal">موقع شخصي</li>
+                <li class="cs-option" role="option" data-value="مدونة" data-i18n="pd_type_blog">مدونة</li>
+                <li class="cs-option" role="option" data-value="تطبيق ويب" data-i18n="pd_type_webapp">تطبيق ويب</li>
+                <li class="cs-option" role="option" data-value="موقع تعريفي لشركة أو مؤسسة أو مكان" data-i18n="pd_type_company">موقع تعريفي لشركة أو مؤسسة أو مكان</li>
+              </ul>
+              <input type="hidden" name="نوع الموقع" id="typeValue">
+            </div>
+            <span class="field-error" data-i18n="pd_type_error">من فضلك اختر نوع الموقع</span>
+          </div>
+
+          <div class="field">
+            <label data-i18n="pd_style_label">نمط الموقع</label>
+            <div class="radio-row">
+              <label class="radio-pill">
+                <input type="radio" name="نمط الموقع" value="عادي" checked>
+                <span data-i18n="pd_style_normal">عادي</span>
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="نمط الموقع" value="3D">
+                <span>3D</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label data-i18n="pd_pages_label">عدد صفحات الموقع</label>
+            <div class="stepper" id="pagesStepper">
+              <button type="button" class="stepper-btn" data-action="dec" aria-label="-">−</button>
+              <span class="stepper-value" id="pagesValue">1</span>
+              <button type="button" class="stepper-btn" data-action="inc" aria-label="+">+</button>
+              <input type="hidden" name="عدد صفحات الموقع" id="pagesInput" value="1">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="otherDetails" data-i18n="pd_details_label">تفاصيل أخرى (اختياري)</label>
+            <textarea id="otherDetails" name="تفاصيل أخرى" data-i18n-placeholder="pd_details_ph" placeholder="أي حاجة تانية حابب تقولّها..."></textarea>
+          </div>
+
+          <div class="field">
+            <label data-i18n="pd_figma_label">تصاميمك على Figma</label>
+            <div class="upload-row">
+              <label class="upload-btn btn btn-ghost btn-sm" for="figmaFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
+              <input type="file" id="figmaFile" name="تصاميم Figma" class="visually-hidden">
+              <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
+              <label class="none-check">
+                <input type="checkbox" class="none-toggle" data-target="figmaFile" name="تصاميم Figma - ملاحظة" value="لا يوجد">
+                <span data-i18n="pd_none">لا يوجد</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label data-i18n="pd_content_label">محتوى الموقع</label>
+            <div class="upload-row">
+              <label class="upload-btn btn btn-ghost btn-sm" for="contentFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
+              <input type="file" id="contentFile" name="محتوى الموقع" class="visually-hidden">
+              <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
+              <label class="none-check">
+                <input type="checkbox" class="none-toggle" data-target="contentFile" name="محتوى الموقع - ملاحظة" value="لا يوجد">
+                <span data-i18n="pd_none">لا يوجد</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="pd-notes">
+          <ul>
+            <li data-i18n="pd_note1">التعديلات المجانية: واحد فقط (يمكنك الزيادة عليها).</li>
+            <li data-i18n="pd_note2">سيتم إرسال رسالة تأكيد لك فيها معلومات الموقع والسعر والوقت المتوقع، يرجى الرد عليها.</li>
+            <li data-i18n="pd_note3">يتم دفع ١٥٪ مقدماً، ويتم إرسال الموقع على ثلاث مراحل (الخطة / MVP / الموقع النهائي).</li>
+            <li data-i18n="pd_note4">لست خبيرًا في قواعد البيانات أو الأمن السيبراني.</li>
+          </ul>
+        </div>
+
+        <button type="submit" class="btn btn-primary pd-submit" data-i18n="pd_submit">إرسال البيانات</button>
+      </form>
+    </div>
+  </section>
+  
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;width:100%;">
+    <span class="fmono">© 2026 Ziad Basha</span>
+    <div class="footer-socials mono">
+      <a href="https://www.facebook.com/share/1bwSuk9KUU/">Facebook</a>
+      <a href="https://www.linkedin.com/in/ziad-basha-b34b5735a?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
+      <a href="https://qabilah.com/profile/ziadbasha/professional-profile">Qabilah</a>
+      
+      <a href="https://github.com/ziadbasha099">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
