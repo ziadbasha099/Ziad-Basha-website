@@ -83,7 +83,7 @@
             <label data-i18n="pd_logo_label">شعار المشروع</label>
             <div class="upload-row">
               <label class="upload-btn btn btn-ghost btn-sm" for="logoFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
-              <input type="file" id="logoFile" name="شعار المشروع" accept="image/*,.pdf" class="visually-hidden">
+              <input type="file" id="logoFile" name="شعار المشروع" accept=".txt,.md,.pdf,image/*,video/*,.fig" class="visually-hidden">
               <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
               <label class="none-check">
                 <input type="checkbox" class="none-toggle" data-target="logoFile" name="شعار المشروع - ملاحظة" value="لا يوجد">
@@ -96,7 +96,7 @@
             <label data-i18n="pd_colors_label">الألوان والخطوط</label>
             <div class="upload-row">
               <label class="upload-btn btn btn-ghost btn-sm" for="colorsFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
-              <input type="file" id="colorsFile" name="الألوان والخطوط" class="visually-hidden">
+              <input type="file" id="colorsFile" name="الألوان والخطوط" accept=".txt,.md,.pdf,image/*,video/*,.fig" class="visually-hidden">
               <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
               <label class="none-check">
                 <input type="checkbox" class="none-toggle" data-target="colorsFile" name="الألوان والخطوط - ملاحظة" value="لا يوجد">
@@ -158,7 +158,7 @@
             <label data-i18n="pd_figma_label">تصاميمك على Figma</label>
             <div class="upload-row">
               <label class="upload-btn btn btn-ghost btn-sm" for="figmaFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
-              <input type="file" id="figmaFile" name="تصاميم Figma" class="visually-hidden">
+              <input type="file" id="figmaFile" name="تصاميم Figma" accept=".txt,.md,.pdf,image/*,video/*,.fig" class="visually-hidden">
               <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
               <label class="none-check">
                 <input type="checkbox" class="none-toggle" data-target="figmaFile" name="تصاميم Figma - ملاحظة" value="لا يوجد">
@@ -171,7 +171,7 @@
             <label data-i18n="pd_content_label">محتوى الموقع</label>
             <div class="upload-row">
               <label class="upload-btn btn btn-ghost btn-sm" for="contentFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
-              <input type="file" id="contentFile" name="محتوى الموقع" class="visually-hidden">
+              <input type="file" id="contentFile" name="محتوى الموقع" accept=".txt,.md,.pdf,image/*,video/*,.fig" class="visually-hidden">
               <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
               <label class="none-check">
                 <input type="checkbox" class="none-toggle" data-target="contentFile" name="محتوى الموقع - ملاحظة" value="لا يوجد">
@@ -192,6 +192,11 @@
 
         <button type="submit" class="btn btn-primary pd-submit" data-i18n="pd_submit">إرسال البيانات</button>
       </form>
+
+      <div class="pd-price glass">
+        <p class="pd-price-main" data-i18n="pd_price_main">السعر يبدأ من ٣٠٠ ج.م (٦ $) فقط</p>
+        <p class="pd-price-sub" data-i18n="pd_price_sub">ملاحظة: السعر يزيد كلما زادت المهام المطلوبة وعدد الصفحات ونوع الموقع والتعديلات.</p>
+      </div>
     </div>
   </section>
   

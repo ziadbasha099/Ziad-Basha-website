@@ -493,6 +493,36 @@ html[lang="ar"] .field-error{font-family:var(--font-ar);}
   color:var(--text);border-inline:1px solid var(--line);height:44px;display:flex;align-items:center;justify-content:center;
 }
 .pd-submit{width:100%;justify-content:center;margin-top:10px;}
+
+/* ============ PRICE BADGE ============ */
+.pd-price{
+  max-width:760px;margin:34px auto 0;
+  padding:32px 30px;text-align:center;
+  border-radius:24px;position:relative;
+  border:2px solid rgba(var(--accent-rgb),.55);
+  animation:pricePulse 2.8s ease-in-out infinite;
+}
+@keyframes pricePulse{
+  0%,100%{box-shadow:0 0 22px 2px rgba(var(--accent-rgb),.35), 0 0 55px 8px rgba(var(--accent-rgb),.18);}
+  50%{box-shadow:0 0 34px 6px rgba(var(--accent-rgb),.6), 0 0 85px 16px rgba(var(--accent-rgb),.32);}
+}
+.pd-price-main{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(1.35rem,3.4vw,2rem);letter-spacing:-.01em;
+  color:var(--accent-2);
+  text-shadow:0 0 18px rgba(var(--accent-rgb),.5);
+  margin-bottom:12px;
+}
+html[lang="ar"] .pd-price-main{font-family:var(--font-ar);font-weight:900;}
+.pd-price-sub{
+  font-size:.86rem;line-height:1.75;color:var(--text-dim);
+  max-width:520px;margin-inline:auto;
+}
+html[lang="ar"] .pd-price-sub{font-family:var(--font-ar);}
+
+@media (max-width:640px){
+  .pd-price{padding:24px 20px;margin-top:26px;}
+}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 
 @media (max-width:640px){
