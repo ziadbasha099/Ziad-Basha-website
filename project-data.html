@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="ziadbasha_logo.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="ziadbasha_logo.jpg">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -100,6 +104,20 @@
               <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
               <label class="none-check">
                 <input type="checkbox" class="none-toggle" data-target="colorsFile" name="الألوان والخطوط - ملاحظة" value="لا يوجد">
+                <span data-i18n="pd_none">لا يوجد</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- video -->
+          <div class="field">
+            <label data-i18n="pd_video_label">الفيديوهات</label>
+            <div class="upload-row">
+              <label class="upload-btn btn btn-ghost btn-sm" for="colorsFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
+              <input type="file" id="colorsFile" name="الفيديوهات" accept=".txt,.md,.pdf,image/*,video/*,.fig" class="visually-hidden">
+              <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
+              <label class="none-check">
+                <input type="checkbox" class="none-toggle" data-target="colorsFile" name="الفيديوهات - ملاحظة" value="لا يوجد">
                 <span data-i18n="pd_none">لا يوجد</span>
               </label>
             </div>
