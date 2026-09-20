@@ -22,6 +22,9 @@
     <nav>
       <a href="#top" class="logo"><span class="dot"></span>Ziad Basha</a>
       <ul class="nav-links">
+        <!-- ▼▼▼ WHY-US START (1/3) رابط القائمة | nav link: احذف هذا الجزء لإزالة الرابط ▼▼▼ -->
+        <li><a href="#why-us" data-i18n="nav_why">ما يميزنا</a></li>
+        <!-- ▲▲▲ WHY-US END (1/3) رابط القائمة | nav link ▲▲▲ -->
         <li><a href="#about" data-i18n="nav_about">نبذة</a></li>
         <li><a href="#skills" data-i18n="nav_skills">المهارات</a></li>
         <li><a href="#process" data-i18n="nav_process">أسلوب العمل</a></li>
@@ -60,6 +63,106 @@
 </section>
 
 <main>
+  <!-- ▼▼▼ WHY-US START (2/3) قسم ما يميزنا | section: احذف كل ما بين START و END لإزالة القسم ▼▼▼ -->
+  <section id="why-us">
+    <!-- Decorative background: soft moving blobs + faint grid -->
+    <div class="why-bg" aria-hidden="true">
+      <span class="why-blob why-blob--one"></span>
+      <span class="why-blob why-blob--two"></span>
+    </div>
+
+    <div class="wrap">
+      <div class="section-tag" data-i18n="why_tag">ما يميزنا</div>
+      <h2 class="section-title why-title" data-i18n="why_title">أربعة أسباب تجعل تجربتك أبسط وأسرع</h2>
+      <p class="section-sub reveal" data-i18n="why_sub">من أول رسالة حتى تسليم موقعك، كل خطوة مصممة لتوفّر عليك الوقت والجهد والتعقيد.</p>
+
+      <div class="why-grid">
+
+        <!-- 01 · Lower price -->
+        <article class="why-card glass" style="--card-index:0">
+          <div class="why-visual why-visual--price">
+            <div class="why-price">
+              <span class="why-price-from" data-i18n="why_price_from">يبدأ من</span>
+              <b class="why-counter" data-count-to="300">٣٠٠</b>
+              <span class="why-price-unit" data-i18n="why_price_unit">ج.م</span>
+            </div>
+            <div class="why-bars" aria-hidden="true">
+              <div class="why-bar-row">
+                <span data-i18n="why_bar_others">المنافسون</span>
+                <div class="why-bar"><i style="--fill:92%"></i></div>
+              </div>
+              <div class="why-bar-row">
+                <span data-i18n="why_bar_us">نحن</span>
+                <div class="why-bar why-bar--us"><i style="--fill:38%"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="why-body">
+            <span class="why-index">01</span>
+            <h3 data-i18n="why1_t">سعر أقل من المنافسين</h3>
+            <p data-i18n="why1_d">أسعار تنافسية بأقل تكلفة ممكنة، ويصلك السعر النهائي واضحاً قبل أن نبدأ العمل.</p>
+          </div>
+        </article>
+
+        <!-- 02 · Easy to work with -->
+        <article class="why-card glass" style="--card-index:1">
+          <div class="why-visual" aria-hidden="true">
+            <div class="mini-form">
+              <span class="mini-field" style="--step:0;--fill:72%"></span>
+              <span class="mini-field" style="--step:1;--fill:92%"></span>
+              <span class="mini-field" style="--step:2;--fill:58%"></span>
+              <span class="mini-submit" style="--step:3">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" pathLength="1"/></svg>
+              </span>
+            </div>
+          </div>
+          <div class="why-body">
+            <span class="why-index">02</span>
+            <h3 data-i18n="why2_t">سهولة في التعامل</h3>
+            <p data-i18n="why2_d">صفحة إدخال بيانات واحدة وواضحة بدلاً من محادثات كثيرة ورسائل متبادلة. تملأ النموذج مرة واحدة ونبدأ.</p>
+          </div>
+        </article>
+
+        <!-- 03 · No heavy technical talk -->
+        <article class="why-card glass" style="--card-index:2">
+          <div class="why-visual why-visual--jargon" aria-hidden="true">
+            <span class="jargon-chip" style="--step:0">API</span>
+            <span class="jargon-chip" style="--step:1">DNS</span>
+            <span class="jargon-chip" style="--step:2">SSL</span>
+            <span class="jargon-chip" style="--step:3">CDN</span>
+            <span class="jargon-ok" style="--step:4">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+              <span data-i18n="why3_badge">بسيط وواضح</span>
+            </span>
+          </div>
+          <div class="why-body">
+            <span class="why-index">03</span>
+            <h3 data-i18n="why3_t">بدون تفاصيل تقنية معقدة</h3>
+            <p data-i18n="why3_d">لا حاجة لفهم المصطلحات التقنية؛ نتولى الجانب التقني، وتركّز أنت على فكرتك ومحتواك.</p>
+          </div>
+        </article>
+
+        <!-- 04 · Record time -->
+        <article class="why-card glass" style="--card-index:3">
+          <div class="why-visual" aria-hidden="true">
+            <ol class="mini-timeline">
+              <li style="--step:0"><i></i><span data-i18n="why_stage1">الخطة</span></li>
+              <li style="--step:1"><i></i><span>MVP</span></li>
+              <li style="--step:2"><i></i><span data-i18n="why_stage3">الموقع النهائي</span></li>
+            </ol>
+          </div>
+          <div class="why-body">
+            <span class="why-index">04</span>
+            <h3 data-i18n="why4_t">موقعك في وقت قياسي</h3>
+            <p data-i18n="why4_d">من الفكرة إلى موقع جاهز في وقت قياسي، عبر ثلاث مراحل واضحة: الخطة، ثم MVP، ثم الموقع النهائي.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  <!-- ▲▲▲ WHY-US END (2/3) قسم ما يميزنا | section ▲▲▲ -->
+
   <section id="about">
     <div class="wrap">
       <div class="section-tag" data-i18n="about_tag">من أنا</div>
@@ -237,6 +340,9 @@
   </svg>
 </button>
 
+<!-- ▼▼▼ WHY-US START (3/3) السكربت | script: يجب أن يسبق app.js ▼▼▼ -->
+<script src="why-us.js"></script>
+<!-- ▲▲▲ WHY-US END (3/3) السكربت | script ▲▲▲ -->
 <script src="app.js"></script>
 </body>
 </html>

@@ -43,6 +43,24 @@ const translations = {
     contact_title:"هل لديك مشروع في ذهنك؟",
     contact_sub:"أراسلني وأخبرني عن فكرتك، دعنا نحوّلها إلى موقع حقيقي يليق بها.",
     contact_email:"راسلني الآن",
+    /* ▼▼▼ WHY-US START (1/4) Arabic translations ▼▼▼ */
+    nav_why:"ما يميزنا",
+    why_tag:"ما يميزنا",
+    why_title:"أربعة أسباب تجعل تجربتك أبسط وأسرع",
+    why_sub:"من أول رسالة حتى تسليم موقعك، كل خطوة مصممة لتوفّر عليك الوقت والجهد والتعقيد.",
+    why_price_from:"يبدأ من", why_price_unit:"ج.م",
+    why_bar_others:"المنافسون", why_bar_us:"نحن",
+    why1_t:"سعر أقل من المنافسين",
+    why1_d:"أسعار تنافسية بأقل تكلفة ممكنة، ويصلك السعر النهائي واضحاً قبل أن نبدأ العمل.",
+    why2_t:"سهولة في التعامل",
+    why2_d:"صفحة إدخال بيانات واحدة وواضحة بدلاً من محادثات كثيرة ورسائل متبادلة. تملأ النموذج مرة واحدة ونبدأ.",
+    why3_t:"بدون تفاصيل تقنية معقدة",
+    why3_d:"لا حاجة لفهم المصطلحات التقنية؛ نتولى الجانب التقني، وتركّز أنت على فكرتك ومحتواك.",
+    why3_badge:"بسيط وواضح",
+    why4_t:"موقعك في وقت قياسي",
+    why4_d:"من الفكرة إلى موقع جاهز في وقت قياسي، عبر ثلاث مراحل واضحة: الخطة، ثم MVP، ثم الموقع النهائي.",
+    why_stage1:"الخطة", why_stage3:"الموقع النهائي",
+    /* ▲▲▲ WHY-US END (1/4) Arabic translations ▲▲▲ */
     roles:["مصمم واجهات ومواقع","مطوّر واجهات أمامية","خبير تجربة مستخدم"],
 
     pd_eyebrow:"نموذج بدء المشروع",
@@ -138,6 +156,24 @@ const translations = {
     contact_title:"Got a project in mind?",
     contact_sub:"Send me a message and tell me about your idea — let's turn it into a real website worthy of it.",
     contact_email:"Email me",
+    /* ▼▼▼ WHY-US START (2/4) English translations ▼▼▼ */
+    nav_why:"Why us",
+    why_tag:"Why us",
+    why_title:"Four reasons your project runs simpler and faster",
+    why_sub:"From the first message to delivery, every step is designed to save you time, effort and complexity.",
+    why_price_from:"From", why_price_unit:"EGP",
+    why_bar_others:"Others", why_bar_us:"Us",
+    why1_t:"Lower price than competitors",
+    why1_d:"Competitive pricing at the lowest cost possible, with the final price clear before we start.",
+    why2_t:"Easy to work with",
+    why2_d:"One clear details form instead of endless chats and back-and-forth. Fill it once and we begin.",
+    why3_t:"No heavy technical talk",
+    why3_d:"No need to understand technical terms. I handle the technical side while you focus on your idea and content.",
+    why3_badge:"Simple & clear",
+    why4_t:"Your site in record time",
+    why4_d:"From idea to a ready website in record time, through three clear stages: plan, MVP, then the final site.",
+    why_stage1:"Plan", why_stage3:"Final site",
+    /* ▲▲▲ WHY-US END (2/4) English translations ▲▲▲ */
     roles:["UI & Web Designer","Front-End Developer","UX Specialist"],
 
     pd_eyebrow:"Project kickoff form",
@@ -190,6 +226,12 @@ const translations = {
 
 let currentLang = 'ar';
 
+/* ▼▼▼ WHY-US START (3/4) event constant ▼▼▼ */
+/** Fired after every language switch so independent modules (why-us.js) can re-render. */
+const LANGUAGE_APPLIED_EVENT = 'app:language-applied';
+
+/* ▲▲▲ WHY-US END (3/4) event constant ▲▲▲ */
+
 function applyLang(lang){
   currentLang = lang;
   document.documentElement.lang = lang;
@@ -204,6 +246,9 @@ function applyLang(lang){
   });
   document.getElementById('langToggle').textContent = (lang === 'ar') ? 'EN' : 'AR';
   startRoleCycle();
+  /* ▼▼▼ WHY-US START (4/4) notify why-us.js after a language switch ▼▼▼ */
+  document.dispatchEvent(new CustomEvent(LANGUAGE_APPLIED_EVENT, { detail: { lang } }));
+  /* ▲▲▲ WHY-US END (4/4) notify why-us.js ▲▲▲ */
 }
 
 document.getElementById('langToggle').addEventListener('click', ()=>{
