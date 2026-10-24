@@ -358,6 +358,69 @@ html[lang="ar"] .process-item h3{font-family:var(--font-ar);}
 html[lang="ar"] .work-body h3{font-family:var(--font-ar);}
 .work-body p{color:var(--text-dim);font-size:.9rem;}
 
+/* ============ FEATURED WORK CARD (حدود مضيئة متحركة) ============ */
+/* Registering the angle lets the browser animate the gradient rotation */
+@property --glow-angle{
+  syntax:'<angle>';
+  initial-value:0deg;
+  inherits:false;
+}
+
+.work-card--featured{
+  --glow-border-width:2px;       /* سُمك الحد المضيء */
+  --glow-spin-duration:5s;       /* مدة دورة الدوران */
+  --glow-pulse-duration:3s;      /* مدة نبض التوهج الخارجي */
+  --glow-inner-blur:14px;        /* نعومة التوهج الداخلي */
+  border-color:transparent;
+  animation:featuredPulse var(--glow-pulse-duration) ease-in-out infinite;
+}
+
+/* ::before = sharp animated border, ::after = same border blurred for the glow */
+.work-card--featured::before,
+.work-card--featured::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:3;
+  padding:var(--glow-border-width);
+  border-radius:inherit;
+  pointer-events:none;
+  background:conic-gradient(
+    from var(--glow-angle),
+    transparent 0deg,
+    var(--accent) 80deg,
+    var(--accent-2) 150deg,
+    transparent 230deg,
+    transparent 360deg
+  );
+  /* Keep only the ring: mask out the content box */
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation:featuredSpin var(--glow-spin-duration) linear infinite;
+}
+.work-card--featured::after{
+  filter:blur(var(--glow-inner-blur));
+  opacity:.85;
+}
+
+.work-card--featured:hover{
+  box-shadow:0 0 50px -4px rgba(var(--accent-rgb),.75);
+}
+
+@keyframes featuredSpin{ to{ --glow-angle:360deg; } }
+@keyframes featuredPulse{
+  0%,100%{ box-shadow:0 0 22px -6px rgba(var(--accent-rgb),.45); }
+  50%    { box-shadow:0 0 42px -2px rgba(var(--accent-rgb),.75); }
+}
+
+/* Respect users who prefer reduced motion: static glow, no spinning */
+@media (prefers-reduced-motion: reduce){
+  .work-card--featured,
+  .work-card--featured::before,
+  .work-card--featured::after{ animation:none !important; }
+}
+
 /* ============ CONTACT ============ */
 .contact-box{
   margin-top:60px;padding:70px 50px;text-align:center;position:relative;overflow:hidden;
