@@ -108,6 +108,8 @@ const translations = {
     pd_success_sub:"وصلتني كل التفاصيل، وهتواصل معاك قريب جداً.",
     pd_price_main:"السعر يبدأ من ٣٠٠ ج.م (٦ $) فقط",
     pd_price_sub:"ملاحظة: السعر يزيد كلما زادت المهام المطلوبة وعدد الصفحات ونوع الموقع والتعديلات.",
+    // داخل ar:
+    w1_github:"الكود على GitHub",
   },
   en: {
     nav_about:"About", nav_skills:"Skills", nav_process:"Process", nav_work:"Work", nav_contact:"Contact",
@@ -220,7 +222,9 @@ const translations = {
     pd_success_title:"Your details are in 🎉",
     pd_success_sub:"Got everything — I'll be in touch very soon.",
     pd_price_main:"Prices start from 300 EGP ($6) only",
-    pd_price_sub:"Note: the price increases with more requested tasks, more pages, the site type, and revisions."
+    pd_price_sub:"Note: the price increases with more requested tasks, more pages, the site type, and revisions.",
+    // داخل en:
+    w1_github:"Code on GitHub",
   }
 };
 
