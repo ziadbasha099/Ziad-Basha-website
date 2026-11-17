@@ -421,6 +421,41 @@ html[lang="ar"] .work-body h3{font-family:var(--font-ar);}
   .work-card--featured::after{ animation:none !important; }
 }
 
+/* ▼▼▼ WORK-CARDS START — الصق هذا الجزء في style.css بعد قسم "WORK" ▼▼▼ */
+
+/* Card is no longer a single <a>: the title link is stretched over the whole card,
+   so interactive children (the GitHub button) can live inside without invalid nested links. */
+.work-card{position:relative;display:flex;flex-direction:column;}
+.work-body{display:flex;flex-direction:column;flex:1;}
+.work-link{color:inherit;}
+.work-link::after{content:'';position:absolute;inset:0;z-index:2;}
+.work-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px;}
+
+/* Tools used: reuses the look of the skills pills, in a compact size */
+.work-tools{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-top:auto;padding-top:18px;
+}
+.tool-tag{
+  padding:6px 12px;border-radius:100px;
+  font-family:var(--font-mono);font-size:.74rem;direction:ltr;
+  background:var(--surface);border:1px solid var(--line);color:var(--text);
+  transition:border-color .3s, background .3s;
+}
+.work-card:hover .tool-tag{border-color:rgba(var(--accent-rgb),.45);}
+
+/* Black GitHub button — sits above the stretched link (z-index 2) and the glow ring (3) */
+.work-actions{margin-top:16px;position:relative;z-index:4;}
+.btn-github{
+  background:#000;color:#fff;
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:0 8px 24px -10px rgba(0,0,0,.8);
+}
+.btn-github:hover{transform:translateY(-3px);border-color:#fff;box-shadow:0 14px 30px -10px rgba(0,0,0,.9);}
+.btn-github svg{flex-shrink:0;}
+
+/* ▲▲▲ WORK-CARDS END ▲▲▲ */
+
 /* ============ CONTACT ============ */
 .contact-box{
   margin-top:60px;padding:70px 50px;text-align:center;position:relative;overflow:hidden;
