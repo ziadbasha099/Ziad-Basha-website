@@ -10,10 +10,14 @@
 
   gtag('config', 'G-9M1Q1QZ8LZ');
 </script>
-  
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>بيانات المشروع — Ziad Basha</title>
+
+<!-- Must run before first paint: flags weak devices so heavy effects are skipped -->
+<script src="performance.js"></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -118,16 +122,16 @@
               </label>
             </div>
           </div>
-          
-          <!-- video -->
+
+          <!-- Videos: own unique id (was a duplicate of "colorsFile") -->
           <div class="field">
             <label data-i18n="pd_video_label">الفيديوهات</label>
             <div class="upload-row">
-              <label class="upload-btn btn btn-ghost btn-sm" for="colorsFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
-              <input type="file" id="colorsFile" name="الفيديوهات" accept=".txt,.md,.pdf,image/*,video/*,.fig" class="visually-hidden">
+              <label class="upload-btn btn btn-ghost btn-sm" for="videosFile"><span data-i18n="pd_upload_cta">اختر ملف</span></label>
+              <input type="file" id="videosFile" name="الفيديوهات" accept=".txt,.md,.pdf,image/*,video/*,.fig" class="visually-hidden">
               <span class="file-name" data-i18n="pd_no_file">لم يتم اختيار ملف</span>
               <label class="none-check">
-                <input type="checkbox" class="none-toggle" data-target="colorsFile" name="الفيديوهات - ملاحظة" value="لا يوجد">
+                <input type="checkbox" class="none-toggle" data-target="videosFile" name="الفيديوهات - ملاحظة" value="لا يوجد">
                 <span data-i18n="pd_none">لا يوجد</span>
               </label>
             </div>
@@ -218,8 +222,21 @@
           </ul>
         </div>
 
+        <!-- Shown by form-submit.js when sending fails; the form stays filled so nothing is lost -->
+        <p class="pd-form-error" role="alert" hidden data-i18n="pd_error">تعذّر إرسال البيانات. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.</p>
+
         <button type="submit" class="btn btn-primary pd-submit" data-i18n="pd_submit">إرسال البيانات</button>
       </form>
+
+      <!-- Translated success message (uses the existing pd_success_* keys); revealed by form-submit.js -->
+      <div class="pd-success pd-card glass" role="status" aria-live="polite" hidden>
+        <div class="pd-success-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        </div>
+        <h2 data-i18n="pd_success_title">تم استلام بياناتك 🎉</h2>
+        <p data-i18n="pd_success_sub">وصلتني كل التفاصيل، وهتواصل معاك قريب جداً.</p>
+        <a href="index.html" class="btn btn-primary btn-sm" data-i18n="pd_back">الرئيسية</a>
+      </div>
 
       <div class="pd-price glass">
         <p class="pd-price-main" data-i18n="pd_price_main">السعر يبدأ من ٣٠٠ ج.م (٦ $) فقط</p>
@@ -227,7 +244,7 @@
       </div>
     </div>
   </section>
-  
+
 </main>
 
 <footer>
@@ -244,5 +261,7 @@
 </footer>
 
 <script src="app.js"></script>
+<!-- After app.js: app.js validates first, then this sends the form in the background -->
+<script src="form-submit.js"></script>
 </body>
 </html>

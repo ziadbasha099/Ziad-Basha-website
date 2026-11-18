@@ -906,3 +906,81 @@ html[lang="ar"] .why-counter{font-family:var(--font-ar);}
 @media (prefers-reduced-motion: reduce){
   *{animation-duration:0.001s !important; transition-duration:0.001s !important;}
 }
+
+/* ▼▼▼ PERF-AND-FORM START — overrides: performance (lite mode, paused animations) + form success/error ▼▼▼ */
+/* ---------- 1. Performance ---------- */
+
+/* Infinite animations stop while their section is off-screen (performance.js) */
+.hero.is-offscreen .hero-bg,
+#why-us.is-offscreen .why-blob,
+.work-card--featured.is-offscreen,
+.work-card--featured.is-offscreen::before,
+.work-card--featured.is-offscreen::after,
+.pd-price.is-offscreen{
+  animation-play-state:paused;
+}
+
+/* The blobs are already soft radial gradients: a 70px blur on a 480px layer
+   cost a lot of GPU and added almost nothing visually. */
+.why-blob{filter:none;}
+.why-blob--two{
+  background:radial-gradient(circle, rgba(var(--accent-rgb),.22), transparent 70%);
+}
+
+/* "Lite" mode (weak devices): same look, no continuous animation / blur */
+html[data-perf="lite"] #glow{display:none;}
+html[data-perf="lite"] .hero-bg{animation:none;transform:scale(1.12);}
+html[data-perf="lite"] .why-blob{animation:none;will-change:auto;}
+html[data-perf="lite"] .work-card--featured,
+html[data-perf="lite"] .work-card--featured::before,
+html[data-perf="lite"] .work-card--featured::after{animation:none;}
+html[data-perf="lite"] .work-card--featured::after{filter:none;}
+html[data-perf="lite"] .work-card--featured{box-shadow:0 0 30px -4px rgba(var(--accent-rgb),.6);}
+html[data-perf="lite"] .pd-price{
+  animation:none;
+  box-shadow:0 0 30px 4px rgba(var(--accent-rgb),.4);
+}
+html[data-perf="lite"] header.scrolled{
+  -webkit-backdrop-filter:none;backdrop-filter:none;
+  background:rgba(10,14,23,.96);
+}
+html[data-perf="lite"][data-theme="light"] header.scrolled{background:rgba(243,247,251,.97);}
+
+/* The global reduced-motion rule shrinks durations to 0.001s, which turns the
+   infinite Ken Burns into a flicker. Stop it outright instead. */
+@media (prefers-reduced-motion: reduce){
+  .hero-bg{animation:none;transform:scale(1.12);}
+  #glow{display:none;}
+}
+
+/* ---------- 2. Form feedback (success / error) ---------- */
+
+.pd-form-error{
+  margin:0 0 14px;padding:12px 16px;border-radius:12px;
+  color:#F87171;font-size:.88rem;line-height:1.7;
+  background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.4);
+}
+
+.pd-success{
+  max-width:760px;margin:-70px auto 0;position:relative;z-index:3;
+  padding:64px 46px;text-align:center;
+}
+.pd-success[hidden]{display:none;}
+.pd-success-icon{
+  width:76px;height:76px;margin:0 auto 24px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#04121f;background:linear-gradient(160deg,var(--accent),var(--accent-2));
+  box-shadow:0 0 40px -4px rgba(var(--accent-rgb),.7);
+}
+.pd-success-icon svg{width:36px;height:36px;}
+.pd-success h2{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(1.5rem,3.6vw,2.2rem);margin-bottom:14px;
+}
+html[lang="ar"] .pd-success h2{font-family:var(--font-ar);font-weight:900;}
+.pd-success p{color:var(--text-dim);max-width:460px;margin:0 auto 30px;line-height:1.8;}
+
+@media (max-width:640px){
+  .pd-success{padding:44px 22px;margin-top:-40px;}
+}
+/* ▲▲▲ PERF-AND-FORM END ▲▲▲ */

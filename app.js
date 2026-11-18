@@ -106,6 +106,7 @@ const translations = {
     pd_submit:"إرسال البيانات",
     pd_success_title:"تم استلام بياناتك 🎉",
     pd_success_sub:"وصلتني كل التفاصيل، وهتواصل معاك قريب جداً.",
+    pd_error:"تعذّر إرسال البيانات. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.",
     pd_price_main:"السعر يبدأ من ٣٠٠ ج.م (٦ $) فقط",
     pd_price_sub:"ملاحظة: السعر يزيد كلما زادت المهام المطلوبة وعدد الصفحات ونوع الموقع والتعديلات.",
     // داخل ar:
@@ -221,6 +222,7 @@ const translations = {
     pd_submit:"Send details",
     pd_success_title:"Your details are in 🎉",
     pd_success_sub:"Got everything — I'll be in touch very soon.",
+    pd_error:"Couldn't send your details. Check your connection and try again.",
     pd_price_main:"Prices start from 300 EGP ($6) only",
     pd_price_sub:"Note: the price increases with more requested tasks, more pages, the site type, and revisions.",
     // داخل en:
@@ -300,17 +302,34 @@ window.addEventListener('scroll', ()=>{
 
 /* ============ CURSOR GLOW ============ */
 const glow = document.getElementById('glow');
-let gx=0, gy=0, cx=0, cy=0;
-const isTouch = matchMedia('(hover:none)').matches;
-if(!isTouch){
-  window.addEventListener('mousemove', e=>{ gx = e.clientX; gy = e.clientY; });
-  function loop(){
-    cx += (gx-cx)*0.12; cy += (gy-cy)*0.12;
-    glow.style.transform = `translate(${cx}px, ${cy}px) translate(-50%,-50%)`;
-    requestAnimationFrame(loop);
-  }
-  loop();
-} else { glow.style.display = 'none'; }
+const GLOW_EASING = 0.12;
+const GLOW_SETTLE_DISTANCE_PX = 0.5;
+const isTouchDevice = matchMedia('(hover:none)').matches;
+const isLiteMode = document.documentElement.dataset.perf === 'lite'; // set by performance.js
+let glowTargetX = 0, glowTargetY = 0, glowX = 0, glowY = 0, glowFrameId = null;
+
+/** Eases the glow toward the pointer; stops requesting frames once it settles. */
+function renderGlowFrame(){
+  const deltaX = glowTargetX - glowX, deltaY = glowTargetY - glowY;
+  glowX += deltaX * GLOW_EASING;
+  glowY += deltaY * GLOW_EASING;
+  glow.style.transform = `translate3d(${glowX}px, ${glowY}px, 0) translate(-50%,-50%)`;
+  const isSettled = Math.abs(deltaX) < GLOW_SETTLE_DISTANCE_PX && Math.abs(deltaY) < GLOW_SETTLE_DISTANCE_PX;
+  glowFrameId = isSettled ? null : requestAnimationFrame(renderGlowFrame);
+}
+
+/** Records the pointer position and wakes the loop if it was idle. */
+function handleGlowPointerMove(event){
+  glowTargetX = event.clientX;
+  glowTargetY = event.clientY;
+  if(glowFrameId === null) glowFrameId = requestAnimationFrame(renderGlowFrame);
+}
+
+if(isTouchDevice || isLiteMode){
+  glow.style.display = 'none';
+} else {
+  window.addEventListener('mousemove', handleGlowPointerMove, {passive:true});
+}
 
 /* ============ SCROLL REVEAL ============ */
 const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
