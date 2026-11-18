@@ -110,12 +110,14 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:20px;}
   position:absolute;inset:0;
   background-image:url('hero-bg.jpg');
   background-size:cover;background-position:center;
-  transform:scale(1.12);
-  animation:kenburns 22s ease-in-out infinite alternate;
+  transform:scale(1.08);
+  will-change:transform;
+  /* Slow, subtle drift (like moving clouds): ~7% zoom over 40s */
+  animation:kenburns 40s ease-in-out infinite alternate;
 }
 @keyframes kenburns{
-  0%{transform:scale(1.12) translate(0,0);}
-  100%{transform:scale(1.22) translate(-1.5%,-1%);}
+  0%{transform:scale(1.08) translate3d(0,0,0);}
+  100%{transform:scale(1.15) translate3d(-1%,-.6%,0);}
 }
 .hero-overlay{
   position:absolute;inset:0;
@@ -455,6 +457,46 @@ html[lang="ar"] .work-body h3{font-family:var(--font-ar);}
 .btn-github svg{flex-shrink:0;}
 
 /* ▲▲▲ WORK-CARDS END ▲▲▲ */
+
+/* ▼▼▼ WORK-DETAILS START — problem / solution text with a "more" button (see app.js) ▼▼▼ */
+.work-details{
+  /* Tunable: how many text lines stay visible before the "more" button appears */
+  --work-details-lines:4;
+  --work-details-line-height:1.8;
+  --work-details-collapsed-height:calc(var(--work-details-lines) * var(--work-details-line-height) * 1em);
+  --work-details-fade:2.2em;
+  margin-top:14px;
+  font-size:.9rem;line-height:var(--work-details-line-height);
+  color:var(--text-dim);
+}
+.work-details p{font-size:inherit;margin:0 0 .5em;}
+.work-details strong{color:var(--text);font-weight:600;}
+.work-details ol{margin:0;padding-inline-start:1.5em;list-style:decimal;}
+.work-details li{margin-bottom:.15em;}
+/* Applied by JS only when the text is taller than the limit; no-JS visitors see it in full */
+.work-details--clamp:not(.is-expanded){
+  max-height:var(--work-details-collapsed-height);overflow:hidden;
+  -webkit-mask-image:linear-gradient(#000 calc(100% - var(--work-details-fade)), transparent);
+  mask-image:linear-gradient(#000 calc(100% - var(--work-details-fade)), transparent);
+}
+/* Sits above the stretched card link (z-index 2) and the glow ring (3) */
+.work-more{
+  position:relative;z-index:4;align-self:flex-start;
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:6px;padding:6px 0;
+  background:none;border:none;color:var(--accent);
+  font-family:var(--font-mono);font-size:.78rem;letter-spacing:.04em;
+  transition:color .3s;
+}
+html[lang="ar"] .work-more{font-family:var(--font-ar);font-size:.85rem;letter-spacing:0;font-weight:700;}
+.work-more[hidden]{display:none;}
+.work-more:hover{color:var(--accent-2);}
+.work-more:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px;}
+.work-more__chevron{flex-shrink:0;transition:transform .3s var(--ease);}
+.work-more[aria-expanded="true"] .work-more__chevron{transform:rotate(180deg);}
+.work-more[aria-expanded="true"] .work-more__label--more,
+.work-more[aria-expanded="false"] .work-more__label--less{display:none;}
+/* ▲▲▲ WORK-DETAILS END ▲▲▲ */
 
 /* ============ CONTACT ============ */
 .contact-box{
@@ -929,7 +971,7 @@ html[lang="ar"] .why-counter{font-family:var(--font-ar);}
 
 /* "Lite" mode (weak devices): same look, no continuous animation / blur */
 html[data-perf="lite"] #glow{display:none;}
-html[data-perf="lite"] .hero-bg{animation:none;transform:scale(1.12);}
+/* (lite mode keeps the hero drift: it is one composited transform, nearly free) */
 html[data-perf="lite"] .why-blob{animation:none;will-change:auto;}
 html[data-perf="lite"] .work-card--featured,
 html[data-perf="lite"] .work-card--featured::before,
@@ -949,7 +991,7 @@ html[data-perf="lite"][data-theme="light"] header.scrolled{background:rgba(243,2
 /* The global reduced-motion rule shrinks durations to 0.001s, which turns the
    infinite Ken Burns into a flicker. Stop it outright instead. */
 @media (prefers-reduced-motion: reduce){
-  .hero-bg{animation:none;transform:scale(1.12);}
+  .hero-bg{animation:none;transform:scale(1.08);}
   #glow{display:none;}
 }
 

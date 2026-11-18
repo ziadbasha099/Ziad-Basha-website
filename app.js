@@ -6,8 +6,8 @@ const translations = {
     hero_name1:"زياد", hero_name2:"باشا",
     hero_prefix:"// ",
     hero_cta1:"شاهد أعمالي", 
-    hero_cta2:"إبنْ موقعك 🌱",
-    scroll:"مرر للأسفل",
+    hero_cta2:"ابنِ موقعك 🌱",
+    scroll:"مرّر للأسفل",
     about_tag:"من أنا",
     about_title:"مصمم يهتم بالتفاصيل الصغيرة التي تصنع فرقاً كبيراً",
     about_p1:"مصمم ومطوّر مواقع إلكترونية، أعمل على تحويل الأفكار إلى تجارب رقمية بصرية واضحة وسريعة الاستجابة. أومن بأن التصميم الجيد هو الذي يُفهم دون شرح.",
@@ -15,7 +15,7 @@ const translations = {
     stat1:"سنوات خبرة", stat2:"مشروع مُنجز", stat3:"عميل سعيد",
     skills_tag:"الأدوات", skills_title:"التقنيات التي أستخدمها يومياً",
     process_tag:"أسلوب العمل", process_title:"من الفكرة إلى موقع جاهز، بأربع خطوات",
-    p1_t:"الاكتشاف", p1_d:"نبدأ بفهم أهدافك وجمهورك المستهدف قبل رسم أي خط.",
+    p1_t:"الاكتشاف", p1_d:"أبدأ بفهم أهدافك وجمهورك المستهدف قبل رسم أي خط.",
     p2_t:"التصميم", p2_d:"بناء واجهات واضحة ومتناسقة تعكس هوية علامتك التجارية.",
     p3_t:"التطوير", p3_d:"تحويل التصميم إلى موقع سريع ومتجاوب يعمل على كل الأجهزة.",
     p4_t:"الإطلاق", p4_d:"اختبار شامل ثم إطلاق الموقع مع متابعة ودعم بعد التسليم.",
@@ -30,32 +30,32 @@ const translations = {
     
     w3_cat:"موقع ثلاثي الأبعاد", 
     w3_t:"موقع عطور", 
-    w3_d:"موقع عطور ثلاثي الابعاد تفاعلي",
+    w3_d:"موقع عطور تفاعلي ثلاثي الأبعاد",
     
-    w4_cat:"متجر . موقع شركة سماعات", 
+    w4_cat:"متجر إلكتروني · موقع شركة سماعات", 
     w4_t:"موقع نيترو", 
-    w4_d:"موقع شركة سماعات راس ثلاثي الأبعاد عصري",
+    w4_d:"موقع عصري ثلاثي الأبعاد لشركة سماعات رأس",
     
     w5_cat:"موقع ثلاثي الأبعاد", 
     w5_t:"موقع شركة طيران", 
     w5_d:"موقع شركة طيران مصرية ثلاثي الأبعاد",
     
     contact_title:"هل لديك مشروع في ذهنك؟",
-    contact_sub:"أراسلني وأخبرني عن فكرتك، دعنا نحوّلها إلى موقع حقيقي يليق بها.",
+    contact_sub:"راسلني وأخبرني عن فكرتك، ودعني أحوّلها إلى موقع حقيقي يليق بها.",
     contact_email:"راسلني الآن",
     /* ▼▼▼ WHY-US START (1/4) Arabic translations ▼▼▼ */
-    nav_why:"ما يميزنا",
-    why_tag:"ما يميزنا",
+    nav_why:"ما يميزني",
+    why_tag:"ما يميزني",
     why_title:"أربعة أسباب تجعل تجربتك أبسط وأسرع",
     why_sub:"من أول رسالة حتى تسليم موقعك، كل خطوة مصممة لتوفّر عليك الوقت والجهد والتعقيد.",
     why_price_from:"يبدأ من", why_price_unit:"ج.م",
-    why_bar_others:"المنافسون", why_bar_us:"نحن",
+    why_bar_others:"المنافسون", why_bar_us:"أنا",
     why1_t:"سعر أقل من المنافسين",
-    why1_d:"أسعار تنافسية بأقل تكلفة ممكنة، ويصلك السعر النهائي واضحاً قبل أن نبدأ العمل.",
+    why1_d:"أسعار تنافسية بأقل تكلفة ممكنة، ويصلك السعر النهائي واضحاً قبل أن أبدأ العمل.",
     why2_t:"سهولة في التعامل",
-    why2_d:"صفحة إدخال بيانات واحدة وواضحة بدلاً من محادثات كثيرة ورسائل متبادلة. تملأ النموذج مرة واحدة ونبدأ.",
+    why2_d:"صفحة إدخال بيانات واحدة وواضحة بدلاً من محادثات كثيرة ورسائل متبادلة. تملأ النموذج مرة واحدة وأبدأ العمل.",
     why3_t:"بدون تفاصيل تقنية معقدة",
-    why3_d:"لا حاجة لفهم المصطلحات التقنية؛ نتولى الجانب التقني، وتركّز أنت على فكرتك ومحتواك.",
+    why3_d:"لا حاجة لفهم المصطلحات التقنية؛ أتولى الجانب التقني، وتركّز أنت على فكرتك ومحتواك.",
     why3_badge:"بسيط وواضح",
     why4_t:"موقعك في وقت قياسي",
     why4_d:"من الفكرة إلى موقع جاهز في وقت قياسي، عبر ثلاث مراحل واضحة: الخطة، ثم MVP، ثم الموقع النهائي.",
@@ -65,7 +65,7 @@ const translations = {
 
     pd_eyebrow:"نموذج بدء المشروع",
     pd_page_title:"بيانات المشروع",
-    pd_sub:"املأ البيانات دي وابعتها، وهبدأ أراجعها وأتواصل معك في أقرب وقت.",
+    pd_sub:"املأ البيانات التالية وأرسلها، وسأراجعها وأتواصل معك في أقرب وقت.",
     pd_back:"الرئيسية",
     pd_user_tag:"بياناتك",
     pd_user_title:"معلومات التواصل",
@@ -97,18 +97,26 @@ const translations = {
     pd_style_label:"نمط الموقع",
     pd_style_normal:"عادي",
     pd_details_label:"تفاصيل أخرى (اختياري)",
-    pd_details_ph:"أي حاجة تانية حابب تقولّها...",
-    pd_note1:"التعديلات المجانية: واحد فقط (يمكنك الزيادة عليها).",
-    pd_note2:"سيتم إرسال رسالة تأكيد لك فيها معلومات الموقع والسعر والوقت المتوقع، يرجى الرد عليها.",
-    pd_note3:"يتم دفع ١٥٪ مقدماً، ويتم إرسال الموقع على ثلاث مراحل (الخطة / MVP / الموقع النهائي).",
+    pd_details_ph:"أي شيء آخر تود إضافته...",
+    pd_note1:"التعديلات المجانية: تعديل واحد فقط (يمكنك طلب المزيد).",
+    pd_note2:"سأرسل إليك رسالة تأكيد تتضمن معلومات الموقع والسعر والوقت المتوقع، يرجى الرد عليها.",
+    pd_note3:"يُدفع ١٥٪ مقدماً، وأسلّم الموقع على ثلاث مراحل (الخطة / MVP / الموقع النهائي).",
     pd_note4:"لست خبيرًا في قواعد البيانات أو الأمن السيبراني.",
     pd_pages_label:"عدد صفحات الموقع",
     pd_submit:"إرسال البيانات",
     pd_success_title:"تم استلام بياناتك 🎉",
-    pd_success_sub:"وصلتني كل التفاصيل، وهتواصل معاك قريب جداً.",
+    pd_success_sub:"وصلتني جميع التفاصيل، وسأتواصل معك قريباً جداً.",
     pd_error:"تعذّر إرسال البيانات. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.",
     pd_price_main:"السعر يبدأ من ٣٠٠ ج.م (٦ $) فقط",
     pd_price_sub:"ملاحظة: السعر يزيد كلما زادت المهام المطلوبة وعدد الصفحات ونوع الموقع والتعديلات.",
+    w1_problem_l:"المشكلة:",
+    w1_problem:"التشتت الناتج عن خوارزميات يوتيوب، وضياع وقت الطلاب في البحث عن الملخصات والمواقع التعليمية.",
+    w1_solution_l:"الحل:",
+    w1_solution_intro:"موقع يوفّر:",
+    w1_sol1:"مكان تضع فيه فيديوهاتك لمشاهدتها مباشرة.",
+    w1_sol2:"مكتبة منظمة ومجانية من الملخصات والمواقع التعليمية.",
+    more_btn:"المزيد",
+    less_btn:"أقل",
     // داخل ar:
     w1_github:"الكود على GitHub",
   },
@@ -131,7 +139,7 @@ const translations = {
     skills_title:"Technologies I use every day",
     process_tag:"How I work",
     process_title:"From idea to live website, in four steps",
-    p1_t:"Discover", p1_d:"We start by understanding your goals and audience before drawing a single line.",
+    p1_t:"Discover", p1_d:"I start by understanding your goals and audience before drawing a single line.",
     p2_t:"Design", p2_d:"Building clear, consistent interfaces that reflect your brand identity.",
     p3_t:"Develop", p3_d:"Turning the design into a fast, responsive site that works on every device.",
     p4_t:"Launch", p4_d:"Full testing, then launch — with follow-up support after delivery.",
@@ -157,19 +165,19 @@ const translations = {
     w5_d:"An Egyptian airline 3d website.",
     
     contact_title:"Got a project in mind?",
-    contact_sub:"Send me a message and tell me about your idea — let's turn it into a real website worthy of it.",
+    contact_sub:"Send me a message and tell me about your idea — let me turn it into a real website worthy of it.",
     contact_email:"Email me",
     /* ▼▼▼ WHY-US START (2/4) English translations ▼▼▼ */
-    nav_why:"Why us",
-    why_tag:"Why us",
+    nav_why:"Why me",
+    why_tag:"Why me",
     why_title:"Four reasons your project runs simpler and faster",
     why_sub:"From the first message to delivery, every step is designed to save you time, effort and complexity.",
     why_price_from:"From", why_price_unit:"EGP",
-    why_bar_others:"Others", why_bar_us:"Us",
+    why_bar_others:"Others", why_bar_us:"Me",
     why1_t:"Lower price than competitors",
-    why1_d:"Competitive pricing at the lowest cost possible, with the final price clear before we start.",
+    why1_d:"Competitive pricing at the lowest cost possible, with the final price clear before I start.",
     why2_t:"Easy to work with",
-    why2_d:"One clear details form instead of endless chats and back-and-forth. Fill it once and we begin.",
+    why2_d:"One clear details form instead of endless chats and back-and-forth. Fill it once and I get started.",
     why3_t:"No heavy technical talk",
     why3_d:"No need to understand technical terms. I handle the technical side while you focus on your idea and content.",
     why3_badge:"Simple & clear",
@@ -225,6 +233,14 @@ const translations = {
     pd_error:"Couldn't send your details. Check your connection and try again.",
     pd_price_main:"Prices start from 300 EGP ($6) only",
     pd_price_sub:"Note: the price increases with more requested tasks, more pages, the site type, and revisions.",
+    w1_problem_l:"The problem:",
+    w1_problem:"Distraction caused by YouTube's algorithms, and the time students lose searching for summaries and educational sites.",
+    w1_solution_l:"The solution:",
+    w1_solution_intro:"A website that offers:",
+    w1_sol1:"A place to add your own videos and watch them directly.",
+    w1_sol2:"An organized, free library of summaries and educational sites.",
+    more_btn:"More",
+    less_btn:"Less",
     // داخل en:
     w1_github:"Code on GitHub",
   }
@@ -459,6 +475,134 @@ if(pdForm){
     if(submitBtn){ submitBtn.disabled = true; submitBtn.style.opacity = .6; }
   });
 }
+
+/* ▼▼▼ WORK-DETAILS START — collapses long project text behind a "more" button ▼▼▼ */
+/* Markup: <div class="work-details" id="x">…</div> + <button class="work-more" aria-controls="x" aria-expanded="false" hidden>.
+   Text taller than --work-details-collapsed-height (style.css) is clamped and the button is revealed.
+   Re-measures after fonts load, on resize and on every language switch (LANGUAGE_APPLIED_EVENT).
+   To remove: delete this block plus the WORK-DETAILS blocks in index.html / style.css. */
+(() => {
+  'use strict';
+
+  /* ---------- Constants ---------- */
+  const LOG_PREFIX = '[work-details]';
+  const RESIZE_DEBOUNCE_MS = 150;
+  const OVERFLOW_TOLERANCE_PX = 2; // sub-pixel rounding must not trigger a button
+  const CLASS_CLAMPED = 'work-details--clamp';
+  const CLASS_EXPANDED = 'is-expanded';
+  const SELECTORS = Object.freeze({
+    toggleButton: '.work-more',
+  });
+
+  /* ---------- Pure helper (unit-tested in work-details.test.js) ---------- */
+
+  /**
+   * Tells whether content is taller than its visible box.
+   * @param {number} scrollHeight Full content height in px.
+   * @param {number} clientHeight Visible box height in px.
+   * @param {number} [tolerance] Allowed difference in px before it counts as overflow.
+   * @returns {boolean} True when content is clipped; false for non-finite input.
+   * @example isOverflowing(180, 120); // true
+   */
+  function isOverflowing(scrollHeight, clientHeight, tolerance = OVERFLOW_TOLERANCE_PX) {
+    if (!Number.isFinite(scrollHeight) || !Number.isFinite(clientHeight)) return false;
+    return scrollHeight - clientHeight > tolerance;
+  }
+
+  /* ---------- DOM behaviour ---------- */
+
+  /**
+   * Resolves the details element controlled by a button.
+   * @param {HTMLElement} button Toggle button with an aria-controls attribute.
+   * @returns {{button: HTMLElement, details: HTMLElement} | null} Pair, or null when markup is broken.
+   */
+  function resolvePair(button) {
+    const detailsId = button.getAttribute('aria-controls');
+    const details = detailsId ? document.getElementById(detailsId) : null;
+    if (!details) {
+      console.error(`${LOG_PREFIX} No element found for aria-controls="${detailsId}"`);
+      return null;
+    }
+    return { button, details };
+  }
+
+  /**
+   * Measures whether the text overflows the collapsed height.
+   * Temporarily collapses an expanded block, then restores its state.
+   * @param {HTMLElement} details Description container.
+   * @returns {boolean} True when a "more" button is needed.
+   */
+  function measureOverflow(details) {
+    const wasExpanded = details.classList.contains(CLASS_EXPANDED);
+    details.classList.remove(CLASS_EXPANDED);
+    details.classList.add(CLASS_CLAMPED);
+    const overflowing = isOverflowing(details.scrollHeight, details.clientHeight);
+    if (wasExpanded) details.classList.add(CLASS_EXPANDED);
+    return overflowing;
+  }
+
+  /**
+   * Syncs the visual state of one pair with the current layout.
+   * @param {{button: HTMLElement, details: HTMLElement}} pair Button and its details.
+   * @returns {void}
+   */
+  function refreshPair({ button, details }) {
+    if (measureOverflow(details)) {
+      button.hidden = false;
+      return;
+    }
+    details.classList.remove(CLASS_CLAMPED, CLASS_EXPANDED);
+    button.setAttribute('aria-expanded', 'false');
+    button.hidden = true;
+  }
+
+  /**
+   * Expands or collapses one description.
+   * @param {{button: HTMLElement, details: HTMLElement}} pair Button and its details.
+   * @returns {void}
+   */
+  function togglePair({ button, details }) {
+    const willExpand = !details.classList.contains(CLASS_EXPANDED);
+    details.classList.toggle(CLASS_EXPANDED, willExpand);
+    button.setAttribute('aria-expanded', String(willExpand));
+  }
+
+  /**
+   * Returns a debounced copy of a function.
+   * @param {() => void} callback Function to delay.
+   * @param {number} delayMs Quiet period in ms.
+   * @returns {() => void} Debounced function.
+   */
+  function debounce(callback, delayMs) {
+    let timerId = null;
+    return () => {
+      clearTimeout(timerId);
+      timerId = setTimeout(callback, delayMs);
+    };
+  }
+
+  /** Wires every toggle button; no-op on pages without one. @returns {void} */
+  function initWorkDetails() {
+    const pairs = Array.from(document.querySelectorAll(SELECTORS.toggleButton))
+      .map(resolvePair)
+      .filter(Boolean);
+    if (pairs.length === 0) return;
+
+    const refreshAll = () => pairs.forEach(refreshPair);
+    pairs.forEach((pair) => pair.button.addEventListener('click', () => togglePair(pair)));
+
+    refreshAll();
+    window.addEventListener('resize', debounce(refreshAll, RESIZE_DEBOUNCE_MS), { passive: true });
+    document.addEventListener(LANGUAGE_APPLIED_EVENT, refreshAll);
+    // Web fonts change line breaks, so measure again once they are ready.
+    document.fonts?.ready.then(refreshAll).catch((error) => {
+      console.error(`${LOG_PREFIX} Could not wait for fonts:`, error);
+    });
+  }
+
+  initWorkDetails();
+})();
+/* ▲▲▲ WORK-DETAILS END ▲▲▲ */
 
 /* ============ INIT ============ */
 applyLang('ar');
