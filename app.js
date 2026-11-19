@@ -39,6 +39,28 @@ const translations = {
     w5_cat:"موقع ثلاثي الأبعاد", 
     w5_t:"موقع شركة طيران", 
     w5_d:"موقع شركة طيران مصرية ثلاثي الأبعاد",
+
+    /* ▼▼▼ WORK-DETAILS (Arabic) — problem / solution for cards 2–5 ▼▼▼ */
+    w2_problem:"صعوبة حصول الزائر المهتم بالتاريخ المصري على لمحة سريعة ومنظمة عن أبرز مقتنيات وآثار المتحف المصري الكبير في مكان واحد بسيط.",
+    w2_solution_intro:"واجهة تعريفية تعرض معلومات وقطعاً أثرية مختارة بأسلوب واضح وسلس:",
+    w2_sol1:"استعراض أبرز المعلومات حول المتحف المصري الكبير ومقتنياته.",
+    w2_sol2:"تجربة تصفح خفيفة وسريعة مناسبة لمختلف الأجهزة.",
+
+    w3_problem:"الاعتماد على الصور الثابتة في عرض العطور لا ينقل للعميل إحساساً حقيقياً بشكل الزجاجة وتفاصيلها البصرية قبل الشراء أو التفاعل.",
+    w3_solution_intro:"تجربة تفاعلية ثلاثية الأبعاد لعرض العطور:",
+    w3_sol1:"تدوير ومعاينة العطر ثلاثي الأبعاد لتفقد تفاصيل التصميم عن قرب.",
+    w3_sol2:"واجهة تفاعلية حديثة تجعل استعراض المنتج أكثر جاذبية.",
+
+    w4_problem:"صفحات المنتجات التقليدية لسماعات الرأس غالباً ما تكون جامدة ولا تبرز الطابع العصري وتفاصيل التصميم للشركة أو المتجر.",
+    w4_solution_intro:"موقع ثلاثي الأبعاد يعرض سماعات الرأس بأسلوب عصري:",
+    w4_sol1:"إبراز تصميم السماعات وهويتها البصرية عبر عرض ثلاثي الأبعاد.",
+    w4_sol2:"تجربة عرض عصرية تساعد على تقديم المنتج بشكل جذاب ومميز.",
+
+    w5_problem:"تقديم هوية شركة طيران بصفحات تقليدية قد يجعل تجربة التصفح أقل إلهاماً مقارنة بطبيعة السفر والطيران.",
+    w5_solution_intro:"موقع ثلاثي الأبعاد يبرز هوية شركة طيران مصرية:",
+    w5_sol1:"تقديم تجربة بصرية ثلاثية الأبعاد تمنح الموقع طابعاً مميزاً.",
+    w5_sol2:"تصميم متجاوب يوضح هوية المشروع بوضوح وسرعة.",
+    /* ▲▲▲ WORK-DETAILS (Arabic) ▲▲▲ */
     
     contact_title:"هل لديك مشروع في ذهنك؟",
     contact_sub:"راسلني وأخبرني عن فكرتك، ودعني أحوّلها إلى موقع حقيقي يليق بها.",
@@ -163,6 +185,28 @@ const translations = {
     w5_cat:"3D website", 
     w5_t:"Airline website", 
     w5_d:"An Egyptian airline 3d website.",
+
+    /* ▼▼▼ WORK-DETAILS (English) — problem / solution for cards 2–5 ▼▼▼ */
+    w2_problem:"Visitors interested in Egyptian history struggle to get a quick, organized overview of the Grand Egyptian Museum's key collections and artifacts in one simple place.",
+    w2_solution_intro:"An informational interface presenting selected facts and artifacts in a clear, smooth way:",
+    w2_sol1:"Browse the key information about the Grand Egyptian Museum and its collections.",
+    w2_sol2:"A light, fast browsing experience that suits all devices.",
+
+    w3_problem:"Static photos of perfumes don't give customers a real sense of the bottle's shape and visual details before they buy or engage.",
+    w3_solution_intro:"An interactive 3D experience for showcasing perfumes:",
+    w3_sol1:"Rotate and inspect the perfume in 3D to examine the design details up close.",
+    w3_sol2:"A modern interactive interface that makes browsing the product more engaging.",
+
+    w4_problem:"Traditional headphone product pages are often static and fail to show off the modern character and design details of the company or store.",
+    w4_solution_intro:"A 3D website that presents headphones in a modern style:",
+    w4_sol1:"Highlight the headphones' design and visual identity through a 3D showcase.",
+    w4_sol2:"A modern presentation experience that makes the product look attractive and distinctive.",
+
+    w5_problem:"Presenting an airline's identity through conventional pages can make browsing less inspiring compared to the spirit of travel and flight.",
+    w5_solution_intro:"A 3D website that highlights the identity of an Egyptian airline:",
+    w5_sol1:"A 3D visual experience that gives the site a distinctive character.",
+    w5_sol2:"A responsive design that conveys the project's identity clearly and quickly.",
+    /* ▲▲▲ WORK-DETAILS (English) ▲▲▲ */
     
     contact_title:"Got a project in mind?",
     contact_sub:"Send me a message and tell me about your idea — let me turn it into a real website worthy of it.",
