@@ -461,7 +461,7 @@ html[lang="ar"] .work-body h3{font-family:var(--font-ar);}
 /* ▼▼▼ WORK-DETAILS START — problem / solution text with a "more" button (see app.js) ▼▼▼ */
 .work-details{
   /* Tunable: how many text lines stay visible before the "more" button appears */
-  --work-details-lines:4;
+  --work-details-lines:2;
   --work-details-line-height:1.8;
   --work-details-collapsed-height:calc(var(--work-details-lines) * var(--work-details-line-height) * 1em);
   --work-details-fade:2.2em;
